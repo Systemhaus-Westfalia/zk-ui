@@ -32,11 +32,7 @@ repositories {
 }
 
 sourceCompatibility = 1.11
-<<<<<<< feature/shw/master
 def baseVersion = 'shw-air-terminal-vertical-1.0.3'
-=======
-def baseVersion = 'shw-air-terminal-vertical-1.0.1'
->>>>>>> e0c09ce Withholding.jar Reverence version air-terminal.1.0.2
 def baseGroupId = 'com.erpya'
 def customBaseVersion = "adempiere-3.9.4"
 dependencies {
