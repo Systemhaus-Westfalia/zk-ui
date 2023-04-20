@@ -30,6 +30,7 @@ import java.util.List;
 import java.util.Vector;
 import java.util.logging.Level;
 
+import org.adempiere.webui.ClientInfo;
 import org.adempiere.webui.apps.AEnv;
 import org.adempiere.webui.apps.BusyDialog;
 import org.adempiere.webui.component.Button;
@@ -46,6 +47,7 @@ import org.adempiere.webui.component.Textbox;
 import org.adempiere.webui.component.WListItemRenderer;
 import org.adempiere.webui.component.WListbox;
 import org.adempiere.webui.component.Window;
+import org.adempiere.webui.desktop.IDesktop;
 import org.adempiere.webui.editor.WPAttributeEditor;
 import org.adempiere.webui.editor.WSearchEditor;
 import org.adempiere.webui.editor.WTableDirEditor;
@@ -312,8 +314,20 @@ public abstract class InfoPanel extends Window implements EventListener, WTableM
         m_modal = modal;
 		//
         p_TabNo = 0;
-		p_height = SessionManager.getAppDesktop().getClientInfo().desktopHeight * 90 / 100;
-		p_width = SessionManager.getAppDesktop().getClientInfo().desktopWidth * 80 / 100;
+        IDesktop desktop = SessionManager.getAppDesktop();
+        if(desktop != null) {
+        	ClientInfo clientInfo = desktop.getClientInfo();
+        	if(clientInfo != null) {
+        		p_height = clientInfo.desktopHeight * 90 / 100;
+        		p_width = clientInfo.desktopWidth * 80 / 100;
+        	}
+        }
+        if(p_height == 0 && p_width == 0) {
+        	p_height = 800;
+        	p_width = 1500;
+        }
+//		p_height = SessionManager.getAppDesktop().getClientInfo().desktopHeight * 90 / 100;
+//		p_width = SessionManager.getAppDesktop().getClientInfo().desktopWidth * 80 / 100;
 
 		init();
 		//
