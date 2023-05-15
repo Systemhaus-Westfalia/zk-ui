@@ -18,7 +18,7 @@
   </a>
 </p>
 
-A swing User Interface based in adempiere box
+A swing User Interface based in adempiere box.
 
 This project just treat of run ADempiere ZK UI based on base adempiere box project using gradle
 
