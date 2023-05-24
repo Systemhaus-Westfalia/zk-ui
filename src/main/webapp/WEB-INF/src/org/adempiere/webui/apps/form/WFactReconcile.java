@@ -355,23 +355,23 @@ public class WFactReconcile extends CustomForm
 		//
 		Row row = new Row();
 		rows.appendChild(row);
-		row.setSpans("1, 1, 1, 1");
+		//row.setSpans("1, 1, 1, 1");
+		row.appendChild(labelOrg.rightAlign());
+		row.appendChild(fieldOrg.getComponent());
 		row.appendChild(labelAcctSchema.rightAlign());
 		row.appendChild(fieldAcctSchema.getComponent());
 		row.appendChild(labelBPartner.rightAlign());
 		row.appendChild(fieldBPartner.getComponent());
 		//
-		row = new Row();
-		rows.appendChild(row);
-		row.setSpans("1, 1, 1, 1");
-		row.appendChild(labelOrg.rightAlign());
-		row.appendChild(fieldOrg.getComponent());
-		row.appendChild(labelProduct.rightAlign());
-		row.appendChild(fieldProduct.getComponent());
+		//row = new Row();
+		//rows.appendChild(row);
+		//row.setSpans("1, 1, 1, 1");
 		//
 		row = new Row();
 		rows.appendChild(row);
-		row.setSpans("1, 1, 1, 1");
+		//row.setSpans("1, 1, 1, 1");
+		row.appendChild(labelProduct.rightAlign());
+		row.appendChild(fieldProduct.getComponent());
 		row.appendChild(labelAccount.rightAlign());
 		row.appendChild(fieldAccount.getComponent());
 		row.appendChild(new Space());
@@ -538,11 +538,11 @@ public class WFactReconcile extends CustomForm
 				pstmt.setInt(index++, (Integer) fieldProduct.getValue());
 			
 			if ( fieldDateAcct.getValue() != null )
-				pstmt.setTimestamp(index++, (Timestamp) fieldDateAcct.getValue());
+				pstmt.setTimestamp(index++, new Timestamp(fieldDateAcct.getValue().getTime()));
 			
 
 			if ( fieldDateAcct2.getValue() != null )
-				pstmt.setTimestamp(index++, (Timestamp) fieldDateAcct2.getValue());
+				pstmt.setTimestamp(index++, new Timestamp(fieldDateAcct2.getValue().getTime()));
 			
 			
 			ResultSet rs = pstmt.executeQuery();
