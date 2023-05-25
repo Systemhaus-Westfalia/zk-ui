@@ -62,7 +62,7 @@ import org.zkoss.zkex.zul.Center;
 import org.zkoss.zkex.zul.North;
 import org.zkoss.zul.Div;
 import org.zkoss.zul.Space;
-import org.eevolution.services.HRActionNotice;
+import org.eevolution.hr.services.HRActionNotice;
 
 /**
  * HRActionNotice Form
