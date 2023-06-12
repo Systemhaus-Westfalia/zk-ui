@@ -546,7 +546,7 @@ public class InfoPaymentPanel extends InfoPanel implements ValueChangeListener, 
 		MQuery query = new MQuery("C_Payment");
 		query.addRestriction("C_Payment_ID", MQuery.EQUAL, C_Payment_ID);
 		query.setRecordCount(1);
-		X_C_Payment payment = new X_C_Payment(Env.getCtx(), C_Payment_ID, null);
+		MPayment payment = new MPayment(Env.getCtx(), C_Payment_ID, null);
 		Boolean defaultWindow = !payment.getC_BankAccount().getC_Bank().getBankType().equals("C");
 		int AD_WindowNo = getAD_Window_ID("C_Payment", defaultWindow);
 		AEnv.zoom (AD_WindowNo, query);
