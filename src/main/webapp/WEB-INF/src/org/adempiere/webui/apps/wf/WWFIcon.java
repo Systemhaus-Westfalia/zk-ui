@@ -71,11 +71,11 @@ public class WWFIcon implements Icon {
 	public void paintIcon (Component c, Graphics g, int x, int y) {
 		Graphics2D g2D = (Graphics2D)g;
 		AImage image = null;
-		try {
-			image = new AImage(Executions.encodeToURL(AEnv.getMenuIconFile(action)));
-		} catch (Exception e) {
-			log.warning(e.getLocalizedMessage());
-		}
+		//try {
+		//	image = new AImage(Executions.encodeToURL(AEnv.getMenuIconFile(action)));
+		//} catch (Exception e) {
+		//	log.warning(e.getLocalizedMessage());
+		//}
 		//	Edit image
 		if (image != null) {
 			ImageIcon icon = image.toImageIcon();
