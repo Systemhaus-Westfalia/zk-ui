@@ -32,7 +32,7 @@ repositories {
 }
 
 sourceCompatibility = 1.11
-def baseVersion = 'shw-air-terminal-vertical-1.0.17'
+def baseVersion = 'shw-air-terminal-vertical-1.0.18'
 def baseGroupId = 'com.erpya'
 def customBaseVersion = "adempiere-3.9.4"
 dependencies {
