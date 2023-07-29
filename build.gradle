@@ -70,6 +70,8 @@ dependencies {
 	implementation "${baseGroupId}:telegram-notifier:${baseVersion}"
 	implementation "${baseGroupId}:tools:${baseVersion}"
 	implementation "${baseGroupId}:jasperreports:${baseVersion}"
+	implementation "${baseGroupId}:adempiere-business-processors:shw-1.0.0"
+	implementation "${baseGroupId}:adempiere-jwt-token:shw-1.0.0"
 	
 
 	// ADempiere External Libraries
