@@ -80,6 +80,8 @@ dependencies {
 	
 	//implementation 'io.github.Systemhaus-Westfalia:LSV:adempiere-3.9.4-LSV-1.0.0'
 	implementation "${baseGroupId}:location-el-salvador:adempiere-3.9.4-LSV-1.0.3"
+	// For Scheduler, Accounting Processors, etc.
+	implementation 'io.github.adempiere:adempiere-business-processors:1.0.9'
 
 	// ADempiere External Libraries
 	implementation 'com.github.jjYBdx4IL:ecs:1.4.2.1'
