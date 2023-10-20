@@ -83,7 +83,7 @@ dependencies {
 	
 	// For Scheduler, Accounting Processors, etc.
 	//implementation 'io.github.adempiere:adempiere-business-processors:1.0.9'               // in adempiere repoitory
-	implementation '${baseGroupId}:adempiere-business-processors:adempiere-3.9.4-abp-1.0.3'  // in Systemhaus-Westfalia repoitory
+	implementation "${baseGroupId}:adempiere-business-processors:adempiere-3.9.4-abp-1.0.3"  // in Systemhaus-Westfalia repoitory
 
 	// ADempiere External Libraries
 	implementation 'com.github.jjYBdx4IL:ecs:1.4.2.1'
