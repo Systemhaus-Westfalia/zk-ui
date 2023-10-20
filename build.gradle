@@ -72,7 +72,7 @@ dependencies {
 	implementation "${baseGroupId}:tools:${baseVersion}"
 	implementation "${baseGroupId}:jasperreports:${baseVersion}"
 	// External Projects
-	implementation "${baseGroupId}:adempiere-business-processors:shw-1.0.0"
+	//implementation "${baseGroupId}:adempiere-business-processors:shw-1.0.0"  // this repository was cloned to repo SystemhausWestfalia
 	implementation "${baseGroupId}:adempiere-jwt-token:shw-1.0.0"
 	//implementation "${baseGroupId}:adempiere-dashboard-improvements:1.0.1"
 	implementation "${baseGroupId}:adempiere-pos-improvements:shw-1.0.0"
