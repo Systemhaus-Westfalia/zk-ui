@@ -6,9 +6,6 @@ apply plugin: 'application'
 // Generate Visual Studio Code .vscode & .json project files
 apply plugin: "visual-studio"
 
-// TEST
-apply plugin: 'maven-publish'
-
 buildscript {
   repositories {
     maven {
