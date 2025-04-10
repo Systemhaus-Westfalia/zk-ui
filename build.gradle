@@ -23,7 +23,8 @@ repositories {
     mavenCentral()
     mavenLocal()
     maven {
-    	url = "https://maven.pkg.github.com/Systemhaus-Westfalia/adempiere-shw"
+    	//url = "https://maven.pkg.github.com/Systemhaus-Westfalia/adempiere-shw"
+    	url = "https://maven.pkg.github.com/Systemhaus-Westfalia/LSV"
         credentials {
         	username = findProperty("deployUsername") ?: System.properties['deploy.user']
             password = findProperty("deployToken") ?: System.properties['deploy.token'] 
