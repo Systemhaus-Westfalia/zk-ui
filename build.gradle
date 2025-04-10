@@ -23,13 +23,6 @@ repositories {
     mavenCentral()
     mavenLocal()
     maven {
-    	url = "https://maven.pkg.github.com/Systemhaus-Westfalia/adempiere-shw"
-        credentials {
-        	username = findProperty("deployUsername") ?: System.properties['deploy.user']
-            password = findProperty("deployToken") ?: System.properties['deploy.token'] 
-		}
-	}
-    maven {
     	url = System.getenv("GITHUB_DEPLOY_REPOSITORY") ?: System.properties['deploy.repository'] ?: 'https://maven.pkg.github.com'
         credentials {
         	username = System.getenv("GITHUB_DEPLOY_USER") ?: System.properties['deploy.user']
