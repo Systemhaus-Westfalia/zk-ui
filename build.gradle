@@ -29,6 +29,13 @@ repositories {
             password = System.getenv("GITHUB_DEPLOY_TOKEN") ?: System.properties['deploy.token'] 
 		}
 	}
+    maven {
+    	url = "https://maven.pkg.github.com/adempiere/adempiere"
+        credentials {
+        	username = findProperty("deployUsername") ?: System.properties['deploy.user']
+            password = findProperty("deployToken") ?: System.properties['deploy.token']
+		}
+	}
 }
 
 sourceCompatibility = 1.11
@@ -79,7 +86,7 @@ dependencies {
 	//implementation "${baseGroupId}:adempiere-kafka-connector:1.0.2"
 	
 	//implementation 'io.github.Systemhaus-Westfalia:LSV:adempiere-3.9.4-LSV-1.0.0'
-	implementation "${baseGroupId}:location-el-salvador:adempiere-3.9.4-LSV-1.0.31"
+	implementation "com.shw:lsv-saprod:lsv-saprod-1.0.1"
 	
 	// For Scheduler, Accounting Processors, etc.
 	//implementation 'io.github.adempiere:adempiere-business-processors:1.0.9'               // in adempiere repoitory
